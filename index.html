@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">To Do List</div>
+        <nav class="nav">
+            <p>Efficient Task Management with Interactive To-Do List</p>
+        </nav>
+    </div>
+
+    <div class="container">
+        <div class="todo-app" id="todo-app">
+            <h1>Add the tasks</h1>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            <ul id="list-container">
+            </ul>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer__title"></p>
+        <div class="footer__social">
+            <a href="https://www.linkedin.com/in/praveen-s-g-832643229/" class="footer__icon">
+                <iconify-icon icon="bi:linkedin"></iconify-icon>
+            </a>
+            <a href="https://github.com/praveensg0" class="footer__icon">
+                <iconify-icon icon="mdi:github"></iconify-icon>
+            </a>
+        </div>
+        <p class="footer__copy">&#169;Praveen S G. All rights reserved</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

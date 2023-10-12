@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comic Neue', cursive;
+    box-sizing: border-box;
+}
+
+/* Header Styles */
+.header {
+    background: linear-gradient(120deg, hsl(0, 94%, 54%), #710871);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Adjust content for the fixed header */
+.content {
+    padding-top: 100px; /* Make space for the fixed header */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px); /* Adjust to make space for header and footer */
+    background: #c5c5c7;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.todo-app:hover {
+    transform: scale(1.05);
+}
+
+.todo-app h1 {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #dcdcdc;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: black;
+    padding: 16px 50px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(checked.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+ul li span:hover {
+    background: rgb(0, 0, 0);
+}
+
+/* Styles for the footer */
+/* Styles for the footer */
+.footer {
+    background: linear-gradient(120deg, hsl(0, 94%, 54%), #710871);
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden; /* Add this line to prevent content overflow */
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+
+.footer__title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #faeeff;
+}
+
+.footer__social {
+    margin-top: 20px;
+}
+
+.footer__icon {
+    color: #faeeff;
+    font-size: 30px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.footer__icon:hover {
+    color: #710871;
+}
+
+.footer__copy {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #faeeff;
+}
+
+/* Media queries for responsive design */
+/* Add styles for larger screens */
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    .todo-app {
+        width: 80%;
+    }
+}
+
+/* Add styles for even larger screens */
+@media screen and (min-width: 1200px) {
+    .container {
+        padding: 40px;
+    }
+
+    .todo-app {
+        width: 60%;
+    }
+}
+
+/* Add styles for smaller screens (e.g., mobile devices) */
+@media screen and (max-width: 767px) {
+    .header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav ul {
+        display: none;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .todo-app {
+        width: 100%;
+    }
+
+    .footer {
+        padding: 10px 0;
+    }
+
+    .footer__title {
+        font-size: 20px;
+    }
+}
