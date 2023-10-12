@@ -7,7 +7,6 @@
     box-sizing: border-box;
 }
 
-/* Header Styles */
 .header {
     background: linear-gradient(120deg, hsl(0, 94%, 54%), #710871);
     color: #fff;
@@ -42,16 +41,15 @@
     color: #fff;
 }
 
-/* Adjust content for the fixed header */
 .content {
-    padding-top: 100px; /* Make space for the fixed header */
+    padding-top: 100px;
 }
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: calc(100vh - 120px); /* Adjust to make space for header and footer */
+    min-height: calc(100vh - 120px);
     background: #c5c5c7;
     padding: 10px;
 }
@@ -82,14 +80,52 @@
     font-size: 3rem;
 }
 
+.task-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
 .row {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     background: #dcdcdc;
     border-radius: 30px;
     padding-left: 20px;
     margin-bottom: 25px;
+}
+
+#input-box {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+    max-width: 100%;
+    max-height: 80px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+#add-button {
+    border: none;
+    outline: none;
+    background: black;
+    padding: 16px 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.task-list {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 30px;
 }
 
 input {
@@ -160,8 +196,6 @@ ul li span:hover {
     background: rgb(0, 0, 0);
 }
 
-/* Styles for the footer */
-/* Styles for the footer */
 .footer {
     background: linear-gradient(120deg, hsl(0, 94%, 54%), #710871);
     color: #fff;
@@ -172,7 +206,7 @@ ul li span:hover {
     bottom: 0;
     width: 100%;
     z-index: 1;
-    overflow: hidden; /* Add this line to prevent content overflow */
+    overflow: hidden;
 }
 
 .footer::before {
@@ -213,8 +247,6 @@ ul li span:hover {
     color: #faeeff;
 }
 
-/* Media queries for responsive design */
-/* Add styles for larger screens */
 @media screen and (min-width: 768px) {
     .container {
         padding: 20px;
@@ -225,7 +257,6 @@ ul li span:hover {
     }
 }
 
-/* Add styles for even larger screens */
 @media screen and (min-width: 1200px) {
     .container {
         padding: 40px;
@@ -236,7 +267,6 @@ ul li span:hover {
     }
 }
 
-/* Add styles for smaller screens (e.g., mobile devices) */
 @media screen and (max-width: 767px) {
     .header {
         padding: 10px 0;
